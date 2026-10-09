@@ -5,6 +5,7 @@
     "name": "Line Item Copy",
     "description": "Copy line items from the enrolled deal to another deal in a workflow.",
     "distribution": "marketplace",
+    "logo": "./app-logo.png",
     "auth": {
       "type": "oauth",
       "redirectUrls": ["https://YOUR-WORKER-URL/oauth/callback"],
