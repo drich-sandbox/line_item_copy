@@ -13,16 +13,19 @@ Important: the code in this repo was written without being able to test against 
 ## Step 1: Install the tools (once)
 
 1. Install Node.js (the "LTS" version) from https://nodejs.org and run the installer with defaults.
-2. Install Git from https://git-scm.com/downloads (defaults are fine).
-3. Open a terminal. On Windows, search for "PowerShell". On Mac, search for "Terminal".
-4. Check it worked: type `node -v` and press Enter. You should see a version number.
-5. Install the HubSpot CLI: `npm install -g @hubspot/cli@latest`
+2. Open a terminal. On Windows, search for "PowerShell". On Mac, search for "Terminal".
+3. Check it worked: type `node -v` and press Enter. You should see a version number.
+4. Install the HubSpot CLI: `npm install -g @hubspot/cli@latest`
 
 ## Step 2: Get the code onto your computer
 
-1. In your terminal run (this downloads your repo): `git clone https://github.com/drich-sandbox/line_item_copy.git`
-2. Then: `cd line_item_copy`
-3. Switch to the branch with the code: `git checkout claude/keen-dijkstra-hd2plq`
+1. Go to https://github.com/drich-sandbox/line_item_copy in your browser.
+2. Click the branch dropdown (it says "main") and choose `claude/keen-dijkstra-hd2plq`.
+3. Click the green **Code** button, then **Download ZIP**.
+4. Double-click the ZIP to unzip it. Move the unzipped folder somewhere easy, like your Documents folder. It will be named something like `line_item_copy-claude-keen-dijkstra-hd2plq`.
+5. In the terminal, go into that folder. Easiest way: type `cd ` (with a space after it), drag the folder from Finder or File Explorer into the terminal window, and press Enter.
+
+No Git or Homebrew needed. If you ever want to use Git later, we can add it then.
 
 (Later, to make this the main version, open a pull request on GitHub and merge it. I can do that when you ask.)
 
@@ -34,7 +37,7 @@ Important: the code in this repo was written without being able to test against 
 
 ## Step 4: Publish the backend on Cloudflare
 
-In the terminal, from the `line_item_copy` folder:
+In the terminal, from inside the unzipped folder:
 
 1. `cd worker`
 2. `npm install`
