@@ -1,0 +1,30 @@
+{
+  "uid": "line-item-copy-app",
+  "type": "app",
+  "config": {
+    "name": "Line Item Copy",
+    "description": "Copy line items from the enrolled deal to another deal in a workflow.",
+    "distribution": "marketplace",
+    "auth": {
+      "type": "oauth",
+      "redirectUrls": ["https://YOUR-WORKER-URL/oauth/callback"],
+      "requiredScopes": [
+        "oauth",
+        "crm.objects.deals.read",
+        "crm.objects.deals.write",
+        "crm.objects.line_items.read",
+        "crm.objects.line_items.write",
+        "crm.schemas.line_items.read"
+      ],
+      "optionalScopes": [],
+      "conditionallyRequiredScopes": []
+    },
+    "permittedUrls": { "fetch": [], "iframe": [], "img": [] },
+    "support": {
+      "supportEmail": "YOUR-EMAIL",
+      "documentationUrl": "https://github.com/drich-sandbox/line_item_copy",
+      "supportUrl": "https://github.com/drich-sandbox/line_item_copy",
+      "supportPhone": ""
+    }
+  }
+}

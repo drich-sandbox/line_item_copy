@@ -1,0 +1,9 @@
+name = "line-item-copy"
+main = "src/index.js"
+compatibility_date = "2025-01-01"
+
+# Free key-value storage that remembers each HubSpot account's login token.
+# The id is filled in during the setup guide (Step 5).
+[[kv_namespaces]]
+binding = "TOKENS"
+id = "PASTE_KV_ID_HERE"

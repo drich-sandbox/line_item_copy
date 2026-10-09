@@ -1,0 +1,53 @@
+{
+  "uid": "copy-line-items-action",
+  "type": "workflow-action",
+  "config": {
+    "actionUrl": "https://YOUR-WORKER-URL/action/copy-line-items",
+    "isPublished": false,
+    "supportedClients": [{ "client": "WORKFLOWS" }],
+    "objectTypes": ["DEAL"],
+    "inputFields": [
+      {
+        "typeDefinition": { "name": "targetDealId", "type": "string", "fieldType": "text" },
+        "supportedValueTypes": ["STATIC_VALUE", "OBJECT_PROPERTY", "FIELD_DATA"],
+        "isRequired": true
+      },
+      {
+        "typeDefinition": {
+          "name": "mode",
+          "type": "enumeration",
+          "fieldType": "select",
+          "options": [
+            { "value": "ADD", "label": "Add copies and keep the target deal's existing line items" },
+            { "value": "REPLACE", "label": "Delete the target deal's existing line items first" }
+          ]
+        },
+        "supportedValueTypes": ["STATIC_VALUE"],
+        "isRequired": true
+      }
+    ],
+    "outputFields": [
+      { "typeDefinition": { "name": "copiedCount", "type": "number", "fieldType": "number" } },
+      { "typeDefinition": { "name": "removedCount", "type": "number", "fieldType": "number" } }
+    ],
+    "labels": {
+      "en": {
+        "actionName": "Copy line items to another deal",
+        "actionDescription": "Copies every line item on the enrolled deal onto the target deal.",
+        "actionCardContent": "Copy line items to deal {{targetDealId}}",
+        "appDisplayName": "Line Item Copy",
+        "inputFieldLabels": {
+          "targetDealId": "Target deal ID",
+          "mode": "If the target deal already has line items"
+        },
+        "inputFieldDescriptions": {
+          "targetDealId": "Pick the deal ID output from a Create record action, or a deal property holding the ID."
+        },
+        "outputFieldLabels": {
+          "copiedCount": "Line items copied",
+          "removedCount": "Line items removed"
+        }
+      }
+    }
+  }
+}
