@@ -9,7 +9,7 @@
     "inputFields": [
       {
         "typeDefinition": { "name": "targetDealId", "type": "string", "fieldType": "text" },
-        "supportedValueTypes": ["STATIC_VALUE", "OBJECT_PROPERTY", "FIELD_DATA"],
+        "supportedValueTypes": ["STATIC_VALUE", "OBJECT_PROPERTY"],
         "isRequired": true
       },
       {
